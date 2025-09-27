@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title> McKeygen - Serial Key Generator for eCDP</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico"
+		<meta name="viewport" content="width=device-width, initial-scale=0.2">
+		<link rel="stylesheet" type="text/css" href="ecdp.css">
+		<script src="ecdp.js"></script>
+	</head>
+	
+	<body onclick="clickjack()">
+		<audio autoplay loop id="playAudio">
+			<source src="BG_09.mp3">
+		</audio>
+		
+		<div class="keygen">
+			<img src="donald.jpg" class="askRonald" width="228" height="406">
+			<div class="leaveOffering"> Leave an offering for Donald McDonald </div>
+			DSi Mac Address:<br>
+			<input type="text" id="dsiMac0" class="macAddr" value="00" maxlength="2" onclick="dsiMac0.select();" oninput="detectChanges(0);"> :
+			<input type="text" id="dsiMac1" class="macAddr" value="00" maxlength="2" onclick="dsiMac1.select();" oninput="detectChanges(1);"> :
+			<input type="text" id="dsiMac2" class="macAddr" value="00" maxlength="2" onclick="dsiMac2.select();" oninput="detectChanges(2);"> :
+			<input type="text" id="dsiMac3" class="macAddr" value="00" maxlength="2" onclick="dsiMac3.select();" oninput="detectChanges(3);"> :
+			<input type="text" id="dsiMac4" class="macAddr" value="00" maxlength="2" onclick="dsiMac4.select();" oninput="detectChanges(4);"> :
+			<input type="text" id="dsiMac5" class="macAddr" value="00" maxlength="2" onclick="dsiMac5.select();" oninput="detectChanges(5);"><br>
+			Store Number:<br>
+			<input type="text" id="storeId" class="entry" maxlength="6" onclick="storeId.select();" oninput="numbersOnly(storeId);"><button onclick="randomizeStoreNumber();" class="dice"></button><br>
+			Store Management Number of DS Card:<br>
+			<input type="text" id="managementId" class="entry" value="000000" maxlength="6" onclick="managementId.select();" oninput="numbersOnly(managementId);"><button onclick="randomizeManagerNumber();" class="dice"></button><br>
+			<input type="submit" id="generate_password" class="button" value="Place Offering" onclick="placeOffering()"><br>
+			<div id="offering">Original by Silica, later ported to JavaScript by @User670.</div>
+		</div>
+		
+		<script>
+			randomizeStoreNumber();
+			randomizeManagerNumber();
+		</script>
+		
+	</body>
+</html>
